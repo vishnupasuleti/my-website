@@ -3,7 +3,7 @@ import { TypingHeader } from "@/components/TypingHeader";
 export default function Home() {
   return (
     <div
-      className="flex flex-col items-center justify-center h-screen"
+      className="flex flex-col items-center justify-center h-screen text-center"
       style={{ height: "calc(100vh - 100px)" }}
     >
       <TypingHeader
