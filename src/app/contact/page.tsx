@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const ContactForm = () => {
@@ -6,7 +7,28 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    const body = {
+      name,
+      email,
+      message,
+    };
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setName("");
+        setEmail("");
+        setMessage("");
+      });
+
+  };
 
   return (
     <div className="w-full">
@@ -54,6 +76,7 @@ const ContactForm = () => {
           <div className="flex justify-end">
             <button
               type="submit"
+              disabled={!name || !email || !message}
               className="px-4 py-2 font-bold text-gray-700 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none focus:shadow-outline"
             >
               Submit

@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div
       className="flex flex-col items-center justify-center h-screen text-center"
-      style={{ height: "calc(100vh - 100px)" }}
+      style={{ height: "calc(100vh - 120px)" }}
     >
       <TypingHeader
         title="Hello, I'm Vishnu Pasuleti"
