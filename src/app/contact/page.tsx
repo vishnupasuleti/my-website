@@ -31,7 +31,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full pb-12">
       <h1 className="my-16 text-3xl font-bold text-center uppercase">
         Contact Me
       </h1>
