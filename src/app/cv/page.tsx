@@ -8,8 +8,8 @@ import { workExperiences } from "@/config/work-experience";
 const Home = () => {
  
   return (
-    <div>
-      <div className="absolute inset-0  top-10 left-[50%]">
+    <div className="flex flex-col">
+      <div className="flex justify-center mb-2">
         <a href="/api/download" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
